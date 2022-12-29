@@ -11,6 +11,20 @@ public void addTask(Task task){
     mapOfTasks.put(task.getId(), task);
 
 }
+    public  void deleteTask(Scanner scanner){
+        System.out.println("Введите ID задачи:");
+        Integer id=scanner.nextInt();
+        for (Iterator<Integer>iterator=mapOfTasks.keySet().iterator(); iterator.hasNext();){
+            Integer key= iterator.next();
+            if (key==id){
+                iterator.remove();
+            }
+        }
+        System.out.println(mapOfTasks);
+
+
+}
+
 public List<Task> getTasksForOneDay(LocalDate date){
     List<Task>result=new ArrayList<>();
 

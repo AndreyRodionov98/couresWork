@@ -1,6 +1,7 @@
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,7 +22,8 @@ public class Main {
                             inputTask(scanner);
                             break;
                         case 2:
-                            // todo:обрабатываем пункт меню 2
+                            service.deleteTask(scanner);
+
                             break;
                         case 3:
                             getTasksForDay(scanner);
@@ -119,11 +121,7 @@ public class Main {
             System.out.println(service.getTasksForOneDay(date));
         }
     }
-    public static void removeTask(Scanner scanner){
-        scanner.nextLine();
 
-
-    }
 
             private static void printMenu() {
                 System.out.println(
